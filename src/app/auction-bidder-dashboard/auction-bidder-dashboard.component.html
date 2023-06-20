@@ -1,0 +1,76 @@
+<app-header></app-header>
+<div [hidden]="divHide" class="alert alert-success">Pre Bid Details added Successfully</div>
+<div class="card my-5">
+    <table>
+        
+        <tbody>
+            <tr>
+                <td><div class="card-body" style="background-color: aliceblue;">
+                    <mat-card style="margin:2em;">
+                      <mat-card-header>
+                      <div style="background-image: url('./assets/TEA_BOARD_OF_INDIA_LOGO.png');" mat-card-avatar class="example-header-image"></div>
+                      <mat-card-title>Auction Summary: </mat-card-title>
+                      <mat-card-subtitle>Auction Details: </mat-card-subtitle>
+                      
+                    </mat-card-header>
+                      <mat-card-content>
+                        
+                              Auction Id : {{auctionDetail != undefined ? auctionDetail.auctionDetailId : ''}}<br>
+                              Auction Brief : {{auctionDetail != undefined ? auctionDetail.auctionBrief : ''}}<br>
+                              Start Date : {{auctionDetail != undefined ? auctionDetail.startDate : ''}}<br>
+                              End Date : {{auctionDetail != undefined ? auctionDetail.endDate : ''}}
+                      </mat-card-content>
+                      
+                    </mat-card>
+                    
+                  </div></td>
+              </tr>
+          <tr style="background-color: aliceblue;">
+            <td *ngIf="auctionItems == undefined || auctionItems.length == 0">
+              <h1 style="text-align: center;color: gray;">No Items</h1>
+            </td>
+            <td>
+    <div *ngIf="auctionItems != undefined && auctionItems.length != 0" class="card-body" style="background-color: aliceblue;">
+        <h1 style="text-align: center;color: gray;">Configure Max Bid for {{auctionItems.length}} Items</h1>
+        <div class="card-body" style="background-color: aliceblue;">
+          <form (ngSubmit)="savePreBidDetails()" #userForm="ngForm">
+          <mat-card *ngFor="let auctionItem of auctionItems" style="margin:2em;">
+            <mat-card-header>
+              <mat-card-title>
+                  {{auctionItem.lotNo}}
+              </mat-card-title>
+              <mat-card-subtitle>Base Price: <span style="color: brown;">{{auctionItem.basePrice}}</span></mat-card-subtitle>
+              <mat-card-subtitle>Category: <span>{{auctionItem.category}}</span></mat-card-subtitle>
+              <mat-card-subtitle>Grade: <span>{{auctionItem.grade}}</span></mat-card-subtitle>
+            </mat-card-header>
+            
+            
+            <mat-card-content >
+          
+            
+              
+              <mat-form-field  class="mat-form-field">
+                <mat-label>Max Bid for {{auctionItem.lotNo}}:</mat-label>
+                <input matInput value="{{bidsForUI != undefined ? bidsForUI.get(auctionItem.auctionItemDetailId) : ''}}"
+              id="item_{{auctionItem.auctionItemDetailId}}"  placeholder="Enter Max Bid"
+              name="item_{{auctionItem.auctionItemDetailId}}" 
+              required >
+              <mat-icon matSuffix> attach_money</mat-icon>
+            </mat-form-field>
+            
+    
+    
+          
+          </mat-card-content>
+          
+          
+          </mat-card>
+          <button mat-raised-button color="primary" type="submit" [disabled]="!userForm.form.valid" class="btn btn-info">
+            Submit</button>
+          </form>
+        </div>
+      </div>
+      </td></tr>
+      
+      </tbody></table>
+</div>

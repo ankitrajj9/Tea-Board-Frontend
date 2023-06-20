@@ -1,0 +1,121 @@
+<app-header></app-header>
+<div [hidden]="divHide" [class]="dynClass">{{dynMsg}}</div>
+<div class="card my-5">
+    <div class="card-body" style="background-color: aliceblue;">
+                  <mat-accordion class="example-headers-align" multi>
+                    <!-- #enddocregion multi -->
+                    <mat-expansion-panel>
+                      <mat-expansion-panel-header>
+                        <div class="my-panel">
+                          <h3>Auction Summary : </h3>
+                        </div>
+                      </mat-expansion-panel-header>
+                      <div>Auction Id : {{auctionDetail != undefined ? auctionDetail.auctionDetailId : ''}}</div>
+                      <div> Auction Brief : {{auctionDetail != undefined ? auctionDetail.auctionBrief : ''}}</div>
+                      <div> Start Date : {{auctionDetail != undefined ? auctionDetail.startDate : ''}}</div>
+                      <div>End Date : {{auctionDetail != undefined ? auctionDetail.endDate : ''}}</div>
+                    </mat-expansion-panel>
+                  </mat-accordion>
+                    
+                
+              
+<!-- Live Bidding Part Starts Here -->
+
+
+<div *ngIf="liveBidDetails != undefined && liveBidDetails.length != 0" class="card-body" style="background-color: aliceblue;">
+
+
+  <mat-card [class]="liveBidDetail.itemColor" *ngFor="let liveBidDetail of liveBidDetails" style="margin:1em;">
+   
+    <!-- <mat-card-header> -->
+      <!-- <mat-card-title>
+          {{liveBidDetail.auctionItemDetail.lotNo}}
+      </mat-card-title> -->
+     
+      <!-- <mat-card-subtitle>Base Price: <span style="color: brown;">{{liveBidDetail.auctionItemDetail.basePrice}}</span></mat-card-subtitle>
+      <mat-card-subtitle>Category: <span>{{liveBidDetail.auctionItemDetail.category}}</span></mat-card-subtitle>
+      <mat-card-subtitle>Grade: <span>{{liveBidDetail.auctionItemDetail.grade}}</span></mat-card-subtitle>
+      <mat-card-subtitle>Current Max Bid: <span style="color: green;"><b>{{liveBidDetail.maxBid}}</b></span></mat-card-subtitle> -->
+      <!-- <mat-card-title>
+        Current Price : 1245
+      </mat-card-title> -->
+    <!-- <mat-card-title> -->
+      <div class="row ml-1">
+        <div class="col-xl" style="font-weight: 600">
+          {{liveBidDetail.auctionItemDetail.lotNo}}
+  
+        </div>
+      </div>
+    <!-- </mat-card-title> -->
+    <div class="row ml-1">
+      <table  class="table table-striped">
+        <tr>
+        
+          <td class="ml-5">Category: </td>
+          <td><span>{{liveBidDetail.auctionItemDetail.category}}</span></td>
+
+          <td>Base Price: </td>
+          <td><span style="color: brown;">{{liveBidDetail.auctionItemDetail.basePrice}}</span></td>
+
+
+          <td class="ml-5">Scheduler Count: </td>
+          <td><span>{{liveBidDetail.auctionItemDetail.schedulerCount}}</span></td>
+          <td *ngIf="liveBidDetail.itemColor == 'alert-success'" class="ml-5" style="vertical-align : middle;text-align:center;font-weight: 600;font-size: 18px;"> Current Price : {{liveBidDetail.currentBid}}</td>
+          <td *ngIf="liveBidDetail.itemColor != 'alert-success'" rowspan="2" class="ml-5" style="vertical-align : middle;text-align:center;font-weight: 600;font-size: 18px;"> Current Price : {{liveBidDetail.currentBid}}</td>
+        </tr>
+        <tr>
+          <td>Grade: </td>
+          <td><span>{{liveBidDetail.auctionItemDetail.grade}}</span></td>
+
+          <td class="ml-5">Current Max Bid: </td>
+          <td><span style="color: green;"><b>{{liveBidDetail.maxBid}}</b></span></td>
+
+          <td class="ml-5">Increment: </td>
+          <td><span>{{liveBidDetail.auctionItemDetail.increment}}</span></td>
+
+          <td *ngIf="liveBidDetail.itemColor == 'alert-success'" class="ml-5"  style="vertical-align : middle;text-align:center;font-weight: 600;font-size: 18px;"> Alloted Price : {{liveBidDetail.l1Amount}}</td>
+
+        </tr>
+      </table>
+    </div>
+    <!-- </mat-card-header> -->
+    
+    
+    <!-- <mat-card-content > -->
+  
+      <!-- <mat-form-field class="mat-form-field" appearance="outline">
+        <mat-label>Change Max Bid for {{liveBidDetail.auctionItemDetail.lotNo}}</mat-label>
+        <input value="" matInput placeholder="Change Max Bid">
+        <mat-icon matSuffix>attach_money</mat-icon>
+      </mat-form-field>
+      <mat-card-actions>
+        <button mat-raised-button color="primary">Change Max Bid</button>&nbsp;&nbsp;
+      </mat-card-actions> -->
+      <div *ngIf="liveBidDetail.itemColor == 'alert-dark'" class="row ml-1 mb-1">
+        <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+          <input
+            type={type}
+            class="form-control"
+            value=""
+            placeholder="Change Max Bid"
+            id="item_{{liveBidDetail.auctionItemDetail.auctionItemDetailId}}"
+          />
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+          <button mat-raised-button color="primary" (click)="changeMaxBid(liveBidDetail.auctionItemDetail.auctionItemDetailId)">Change Max Bid</button>
+        </div>
+        <div class="col-xl-3 col-lg-4 col-md-3 col-12">
+          <button mat-raised-button color="warn" (click)="exitFromItem(liveBidDetail.auctionItemDetail.auctionItemDetailId)">Exit</button>
+        </div>
+      </div>
+      
+<!-- </mat-card-content> -->
+
+
+  </mat-card>
+  
+  
+</div>
+</div>
+</div>
+              

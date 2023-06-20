@@ -1,0 +1,50 @@
+<app-header></app-header>
+<div class="card my-5" style="width: 600px;margin-left: auto;margin-right: auto;">
+    <div class="card-body" style="background-color: aliceblue;">
+      <mat-card style="margin:2em;">
+        <mat-card-title style="margin-left: auto;margin-right: auto;">Create Auction</mat-card-title>
+        <mat-card-content>
+      <form (ngSubmit)="approveAuction()" #userForm="ngForm">
+        <div class="form-group" >
+          <mat-form-field class="mat-form-field">
+            <mat-label>Auction Brief:</mat-label>
+            <input matInput  [(ngModel)]="auctionDetail.auctionBrief" 
+          id="auctionBrief"  placeholder="Enter Auction Brief"
+          name="auctionBrief" value="{{auctionDetail.auctionBrief}}"
+          required #name="ngModel">
+          <mat-icon matSuffix> create</mat-icon>
+        </mat-form-field>
+        </div>
+
+        <div class="form-group">
+            <mat-form-field class="mat-form-field" >
+              <mat-label>Start Date:</mat-label>
+              <input matInput  type="datetime-local"  id="startDate" name="startDate" required #name="ngModel" [(ngModel)]="auctionDetail.startDate">
+              <mat-hint>DD/MM/YYYY</mat-hint>
+              
+            </mat-form-field>
+          </div>
+
+          <div class="form-group">
+            <mat-form-field class="mat-form-field" appearance="fill">
+              <mat-label>End Date:</mat-label>
+              <input matInput type="datetime-local"  id="endDate" name="endDate" required #name="ngModel" [(ngModel)]="auctionDetail.endDate">
+              <mat-hint>DD/MM/YYYY</mat-hint>
+              
+            </mat-form-field>
+          </div>
+
+          <!-- <mat-form-field>
+            <input matInput type="datetime-local" placeholder="start date">
+          </mat-form-field> -->
+
+
+      <button mat-raised-button color="primary" type="submit" [disabled]="!userForm.form.valid" class="btn btn-info">
+        Approve</button>
+        
+      </form>
+      </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+  

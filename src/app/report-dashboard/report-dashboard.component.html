@@ -1,0 +1,117 @@
+<app-header></app-header>
+
+<div *ngIf="reportData == undefined || reportData.length == 0" class="card-body" style="background-color: aliceblue;">
+<h1 *ngIf="reportData == undefined" style="text-align: center;" >No Report Available </h1>
+</div>
+<div *ngIf="reportData != undefined && reportData.length != 0" class="card-body" style="background-color: aliceblue;">
+
+    <div class="row ml-1">
+        <div class="col-xl" style="font-weight: 600;font-size: 18px;color:rgb(71, 71, 223)">
+          L1/H1 Details
+  
+        </div>
+      </div>
+    <mat-card *ngFor="let reportDtl of reportData" style="margin:1em;">
+     
+    
+        <div class="row ml-1">
+          <div class="col-xl" style="font-weight: 600;color:rgb(71, 71, 223)">
+            {{reportDtl.lotNo}}
+    
+          </div>
+        </div>
+      <div class="row ml-1">
+        <table  class="table table-striped">
+          <tr>
+          
+            <td class="ml-5">Base Price : </td>
+            <td><span>{{reportDtl.basePrice}}</span></td>
+  
+            <td>Increment : </td>
+            <td><span style="color: brown;">{{reportDtl.increment}}</span></td>
+  
+  
+            <td class="ml-5" rowspan="2"  style="vertical-align : middle;text-align:center;font-size: large"><b>L1/H1 Amount : </b>
+            
+            </td>
+            <td *ngIf="reportDtl.l1Amount != undefined" rowspan="2"  style="vertical-align : middle;text-align:center;"><span style="color:green;font-size: large;margin-right: 50px;"><b>{{reportDtl.l1Amount}}</b></span>
+              <br>
+              <span style="margin-right: 25px;">
+              <button (click)="open(mymodal,reportDtl.auctionItemDetailId)" mat-raised-button color="primary">Bid Break up Details</button>
+              </span>
+            </td>
+            <td *ngIf="reportDtl.l1Amount == undefined" rowspan="2"  style="vertical-align : middle;text-align:center;"><span style="color:red;font-size: large;margin-right: 50px;"><b>Un sold</b></span></td>
+                    
+        </tr>
+          <tr>
+            <td>Reserve Price : </td>
+            <td><span>{{reportDtl.reservePrice}}</span></td>
+  
+            <td class="ml-5">Bidder : </td>
+            <td><span>{{reportDtl.loginId}}</span></td>
+  
+            
+  
+          </tr>
+        </table>
+      </div>
+      <!-- </mat-card-header> -->
+      
+      
+      <!-- <mat-card-content > -->
+    
+        <!-- <mat-form-field class="mat-form-field" appearance="outline">
+          <mat-label>Change Max Bid for {{liveBidDetail.auctionItemDetail.lotNo}}</mat-label>
+          <input value="" matInput placeholder="Change Max Bid">
+          <mat-icon matSuffix>attach_money</mat-icon>
+        </mat-form-field>
+        <mat-card-actions>
+          <button mat-raised-button color="primary">Change Max Bid</button>&nbsp;&nbsp;
+        </mat-card-actions> -->
+       
+  <!-- </mat-card-content> -->
+  
+  
+    </mat-card>
+    
+    
+  </div>
+
+  <ng-template #mymodal let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Bid Break Up Details: </h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">×</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      
+      <div class="row ml-1">
+        <table  class="table table-striped">
+           <tr>
+            <th  >Login Id: </th>
+            <th > CP@Exit: </th>
+            <th > Max Bid: </th>
+            <th >Type: </th>
+
+          </tr>
+          
+          <tr *ngFor="let exit of exitDtls">
+          
+            <td ><span style="font-size: 18px;color:rgb(71, 71, 223)">{{exit.loginId}} </span></td>
+  
+            <td ><span style="color: brown;">{{exit.amount}}</span></td>
+            <td ><span style="color: brown;">{{exit.maxBid}}</span></td>
+  
+            <td ><span style="color: brown;">{{exit.cstatus == 2 ? 'Auto' : 'Manual'}}</span></td>
+                    
+        </tr>
+        </table>
+      </div>
+  
+  
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Ok</button>
+    </div>
+  </ng-template>

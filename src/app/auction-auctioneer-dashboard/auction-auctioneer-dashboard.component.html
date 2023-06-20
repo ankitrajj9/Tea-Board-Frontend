@@ -1,0 +1,90 @@
+<app-header></app-header>
+<div [hidden]="divHide" class="alert alert-success">Items Added Successfully</div>
+<div class="card my-5">
+  <table>
+        
+    <tbody>
+      <tr style="background-color: aliceblue;">
+        
+        <td style="width: 50%;">
+    <div class="card-body" style="background-color: aliceblue;">
+      <mat-card style="margin:2em;">
+        <mat-card-header>
+        <div style="background-image: url('./assets/TEA_BOARD_OF_INDIA_LOGO.png');" mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Auction Summary: </mat-card-title>
+        <mat-card-subtitle>Auction Details: </mat-card-subtitle>
+        
+      </mat-card-header>
+        <mat-card-content>
+          
+                Auction Id : {{auctionDetail != undefined ? auctionDetail.auctionDetailId : ''}}<br>
+                Auction Brief : {{auctionDetail != undefined ? auctionDetail.auctionBrief : ''}}<br>
+                Start Date : {{auctionDetail != undefined ? auctionDetail.startDate : ''}}<br>
+                End Date : {{auctionDetail != undefined ? auctionDetail.endDate : ''}}
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-raised-button color="primary" (click)="approveAuction(auctionDetail.auctionDetailId)">Approve</button>
+          &nbsp;<button mat-raised-button color="primary" (click)="goToL1Report(auctionDetail.auctionDetailId)">L1 Report</button>
+        </mat-card-actions>
+      </mat-card>
+      
+    </div>
+    </td>
+    <td style="width: 50%;">
+      <div class="card-body" style="background-color: aliceblue;">
+        <mat-card style="margin:2em;">
+          <mat-card-header>
+          <div style="background-image: url('./assets/TEA_BOARD_OF_INDIA_LOGO.png');" mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Upload Auction Items: </mat-card-title>
+          
+        </mat-card-header>
+          <mat-card-content>
+            
+            <form (ngSubmit)="uploadExcel()" #userForm="ngForm">
+              <div class="form-group">
+                <mat-card style="margin:2em;">
+                  <mat-card-title>Upload Excel</mat-card-title>
+                  <mat-card-content>
+              <div class="card-body" style="margin-left: 50px;">
+                  <input type="file" (change)="onExcelUpload($event)">
+                  <input type="button" (click)="uploadExcel()" value="Upload Excel" class="btn1">
+              </div>
+              
+            </mat-card-content></mat-card>
+              </div>
+              </form>
+          </mat-card-content>
+          
+        </mat-card>
+        
+      </div>
+      </td>
+      </tr>
+    <tr style="background-color: aliceblue;">
+      <td colspan="2" *ngIf="auctionItems == undefined || auctionItems.length == 0">
+        <h1 style="text-align: center;color: gray;">No Items</h1>
+      </td>
+      <td *ngIf="auctionItems != undefined && auctionItems.length != 0" style="width: 100%;" colspan="2">
+        <h1 style="text-align: center;color: gray;">Auction Items : {{auctionItems.length}}</h1>
+      <mat-card  *ngFor="let auctionItem of auctionItems" style="margin:2em;">
+        <mat-card-header>
+         
+        <mat-card-subtitle>
+          Sr No.{{auctionItem.serialNo}}
+      </mat-card-subtitle>
+      <mat-card-subtitle>
+        Lot Detail : {{auctionItem.lotNo}}
+      </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+          
+      Base Price : {{auctionItem.basePrice}}<br>
+      Reserve Price : {{auctionItem.reservePrice}}<br>
+      Increment : {{auctionItem.increment}}<br>
+</mat-card-content>
+
+      </mat-card>
+      </td>
+      </tr>
+    </tbody></table>
+  </div>

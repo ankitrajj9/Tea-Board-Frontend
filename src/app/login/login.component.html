@@ -1,0 +1,42 @@
+
+<div class="card my-5" style="width: 600px;margin-left: auto;margin-right: auto;">
+    <div class="card-body" style="background-color: aliceblue;">
+      <mat-card style="margin:2em;">
+        <mat-card-title style="margin-left: auto;margin-right: auto;">Log In</mat-card-title>
+        <mat-card-content>
+            <div [hidden]="showDiv" class="alert alert-danger">{{errorMessage}}</div>
+      <form (ngSubmit)="logIn()" #userForm="ngForm">
+        <div class="form-group" >
+          <mat-form-field class="mat-form-field">
+            <mat-label>Email:</mat-label>
+            <input matInput  [(ngModel)]="userLogin.loginId" 
+          id="loginId"  placeholder="Enter Email"
+          name="loginId" 
+          required #name="ngModel">
+          <mat-icon matSuffix> email</mat-icon>
+        </mat-form-field>
+        </div>
+
+        <div class="form-group">
+          <mat-form-field class="mat-form-field">
+            <mat-label>Password:</mat-label>
+            <input matInput type="password"  [(ngModel)]="userLogin.password" 
+          id="password"  placeholder="Enter Password"
+          name="password" 
+          required #name="ngModel">
+          <mat-icon matSuffix>vpn_key</mat-icon>
+        </mat-form-field>
+        </div>
+
+
+      <button mat-raised-button color="primary" type="submit" [disabled]="!userForm.form.valid" class="btn btn-info">
+        Submit</button> &nbsp;
+        <button mat-raised-button color="primary" (click)="signUp()" >Sign Up</button>
+      </form>
+      </mat-card-content>
+      
+      </mat-card>
+    </div>
+  </div>
+
+  

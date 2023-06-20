@@ -1,0 +1,53 @@
+
+<div class="card my-5" [hidden]="mainDiv" style="width: 600px;margin-left: auto;margin-right: auto;">
+    <div class="card-body" style="background-color: aliceblue;">
+      <mat-card style="margin:2em;">
+        <mat-card-title style="margin-left: auto;margin-right: auto;">Sign Up</mat-card-title>
+        <mat-card-content>
+      <form (ngSubmit)="saveUser()" #userForm="ngForm">
+        <div class="form-group" >
+          <mat-form-field class="mat-form-field">
+            <mat-label>Email:</mat-label>
+            <input matInput  [(ngModel)]="userLogin.loginId" 
+          id="loginId"  placeholder="Enter Email"
+          name="loginId" 
+          required #name="ngModel">
+          <mat-icon matSuffix> email</mat-icon>
+        </mat-form-field>
+        </div>
+
+        <div class="form-group">
+          <mat-form-field class="mat-form-field">
+            <mat-label>Password:</mat-label>
+            <input matInput type="password"  [(ngModel)]="userLogin.password" 
+          id="password"  placeholder="Enter Password"
+          name="password" 
+          required #name="ngModel">
+          <mat-icon matSuffix>vpn_key</mat-icon>
+        </mat-form-field>
+        </div>
+
+        <div class="form-group">
+            <mat-form-field class="mat-form-field">
+              <mat-label>Select User Type:</mat-label>
+              <mat-select [(ngModel)]="userLogin.userTypeId"  name="userTypeId" id="userTypeId">  
+                <mat-option value = "1"> Officer </mat-option>  
+                <mat-option value = "2"> Bidder </mat-option>  
+              </mat-select>  
+            <mat-icon matSuffix>vpn_key</mat-icon>
+          </mat-form-field>
+          </div>
+
+
+      <button mat-raised-button color="primary" type="submit" [disabled]="!userForm.form.valid" class="btn btn-info">
+        Submit</button>
+        
+        <a style="margin-left: 10px;" mat-raised-button color="primary" routerLink="/login" mat-button>LogIn</a>
+      </form>
+      </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+  <div [hidden]="divShow" class="alert-success">Details saved Successfully . Please Log In to Continue
+    <br><button mat-raised-button color="primary" (click)="logIn()" >Log In</button>
+  </div>

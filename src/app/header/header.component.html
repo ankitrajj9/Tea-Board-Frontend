@@ -1,0 +1,38 @@
+<mat-toolbar color="primary" class="app-toolbar">
+    <mat-toolbar-row>
+      
+      <span><button routerLink="{{homeUrl}}" mat-button ><mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+        Tea-Board</button></span>
+      <span class="menu-spacer"></span>
+      <div fxShow="true">
+        <!-- The following menu items will be hidden on both SM and XS screen sizes -->
+        <span *ngIf="userTypeId == 1">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </span>
+        <span *ngIf="userTypeId == 2">
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          </span>
+        <button *ngIf="userTypeId == 1" routerLink="/getusers" mat-button>Show Users</button>
+        <button *ngIf="userTypeId == 1" routerLink="/createauction" mat-button>Create Auction</button>
+        <button [matMenuTriggerFor]="profile"  mat-button><mat-icon>account_circle</mat-icon>
+     Hello {{userLogin != undefined ? userLogin.loginId : 'User'}}</button>
+     
+          <mat-menu #profile="matMenu">
+            <button routerLink="/viewprofile/" mat-menu-item>View Profile</button>
+            <button routerLink="/edituser/" mat-menu-item>Edit Profile</button>
+          </mat-menu>
+
+        <button routerLink="/logout" mat-button>Logout</button>
+        </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
