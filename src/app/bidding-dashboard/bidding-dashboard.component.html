@@ -52,26 +52,26 @@
         <tr>
         
           <td class="ml-5">Category: </td>
-          <td><span>{{liveBidDetail.auctionItemDetail.category}}</span></td>
+          <td>{{liveBidDetail.auctionItemDetail.category}}</td>
 
           <td>Base Price: </td>
-          <td><span style="color: brown;">{{liveBidDetail.auctionItemDetail.basePrice}}</span></td>
+          <td style="color: brown;">{{liveBidDetail.auctionItemDetail.basePrice}}</td>
 
 
           <td class="ml-5">Scheduler Count: </td>
-          <td><span>{{liveBidDetail.auctionItemDetail.schedulerCount}}</span></td>
+          <td>{{liveBidDetail.auctionItemDetail.schedulerCount}}</td>
           <td *ngIf="liveBidDetail.itemColor == 'alert-success'" class="ml-5" style="vertical-align : middle;text-align:center;font-weight: 600;font-size: 18px;"> Current Price : {{liveBidDetail.currentBid}}</td>
           <td *ngIf="liveBidDetail.itemColor != 'alert-success'" rowspan="2" class="ml-5" style="vertical-align : middle;text-align:center;font-weight: 600;font-size: 18px;"> Current Price : {{liveBidDetail.currentBid}}</td>
         </tr>
         <tr>
           <td>Grade: </td>
-          <td><span>{{liveBidDetail.auctionItemDetail.grade}}</span></td>
+          <td>{{liveBidDetail.auctionItemDetail.grade}}</td>
 
           <td class="ml-5">Current Max Bid: </td>
-          <td><span style="color: green;"><b>{{liveBidDetail.maxBid}}</b></span></td>
+          <td style="color: green;">{{liveBidDetail.maxBid}}</td>
 
           <td class="ml-5">Increment: </td>
-          <td><span>{{liveBidDetail.auctionItemDetail.increment}}</span></td>
+          <td>{{liveBidDetail.auctionItemDetail.increment}}</td>
 
           <td *ngIf="liveBidDetail.itemColor == 'alert-success'" class="ml-5"  style="vertical-align : middle;text-align:center;font-weight: 600;font-size: 18px;"> Alloted Price : {{liveBidDetail.l1Amount}}</td>
 

@@ -46,7 +46,7 @@ export class BiddingDashboardComponent {
             let increment = bidDtl.increment;
             let currentPrice = bidDtl.currentBid;
             let maxBid = bidDtl.maxBid
-            if((currentPrice+increment) <= maxBid){
+            if((currentPrice+increment) <= maxBid && bidDtl.itemColor == 'alert-dark'){
             bidDtl.currentBid = currentPrice+increment
             bidDtl.auctionItemDetail.schedulerCount = bidDtl.auctionItemDetail.schedulerCount+1
           }

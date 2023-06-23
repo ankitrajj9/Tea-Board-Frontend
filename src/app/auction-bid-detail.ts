@@ -14,4 +14,5 @@ export class AuctionBidDetail {
     cstatus:number
     createdOn:string
     createdBy:number
+    remarks:string
 }
