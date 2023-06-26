@@ -97,4 +97,10 @@ export class AuctionServiceService {
   public getReportDetails(auctionDetailId:number): Observable<ReportDetail[]> {
     return this.http.get<ReportDetail[]>(this.teaboardBackEndUrl+`/getreportdetails/${auctionDetailId}`);
   }
+
+  public copyAuction(auctionDetailId: number):any {
+    const body = new HttpParams()
+      .set('auctionDetailId', auctionDetailId)
+   return this.http.post<any>(this.teaboardBackEndUrl+'/copyauction', body);
+ }
 }

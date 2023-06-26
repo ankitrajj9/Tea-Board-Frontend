@@ -75,4 +75,13 @@ export class AuctionAuctioneerDashboardComponent {
     public goToL1Report(auctionDetailId:any){
       this.router.navigate([`reportdashboard/${auctionDetailId}`]);
     }
+
+    public copyAuction(auctionDetailId:any){
+      this.auctionService.copyAuction(this.auctionDetailId).subscribe(data => {
+        console.log(data)
+        if(data.responseCode == 200){
+          this.router.navigate(['auctioneerdashboard']);
+        }
+      });
+    }
 }
