@@ -16,7 +16,7 @@ export class AuctionBidderDashboardComponent {
   divHide:boolean=true
   auctionItems:AuctionItemDetail[]
   auctionDetailId:any
-  preBidDetails:PreBidDetail[] = new Array()
+  preBidDetails:PreBidDetail[] 
   savedPreBidDetails:PreBidDetail[]
   bidsForUI:any
 
@@ -53,6 +53,7 @@ export class AuctionBidderDashboardComponent {
     // for (let item in this.auctionItems) {
     //   console.log((<HTMLInputElement>document.getElementById("item_"+item.auctionItemDetailId)).value);
     // }
+    this.preBidDetails = new Array()
     for (var item of this.auctionItems) {
       console.log(item.auctionItemDetailId)
       let preBidDtl:PreBidDetail = new PreBidDetail()
