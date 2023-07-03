@@ -103,4 +103,8 @@ export class AuctionServiceService {
       .set('auctionDetailId', auctionDetailId)
    return this.http.post<any>(this.teaboardBackEndUrl+'/copyauction', body);
  }
+
+ public searchAuctions(param,userLoginId): Observable<AuctionDetail[]>{
+  return this.http.get<AuctionDetail[]>(this.teaboardBackEndUrl+`/searchauctions/${param}/${userLoginId}`);
+}
 }

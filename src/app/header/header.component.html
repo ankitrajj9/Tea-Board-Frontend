@@ -3,25 +3,27 @@
       
       <span><button routerLink="{{homeUrl}}" mat-button ><mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
         Tea-Board</button></span>
+        
       <span class="menu-spacer"></span>
       <div fxShow="true">
         <!-- The following menu items will be hidden on both SM and XS screen sizes -->
         <span *ngIf="userTypeId == 1">
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </span>
         <span *ngIf="userTypeId == 2">
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           </span>
+          <mat-form-field style="min-width: 450px;min-height: 40px;max-height: 70px;color: #3f51b5;" appearance="fill" class="mt-4">
+            <mat-icon matSuffix >search</mat-icon>
+             <mat-label style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size: medium;">Search Auctions</mat-label>
+             <input matInput  type="text" 
+           id="search" 
+           name="search" (keyup)="searchAuction($event)"
+            >
+         </mat-form-field>
         <button *ngIf="userTypeId == 1" routerLink="/getusers" mat-button>Show Users</button>
         <button *ngIf="userTypeId == 1" routerLink="/createauction" mat-button>Create Auction</button>
         <button [matMenuTriggerFor]="profile"  mat-button><mat-icon>account_circle</mat-icon>
@@ -36,3 +38,32 @@
         </div>
     </mat-toolbar-row>
   </mat-toolbar>
+
+
+  <div *ngIf="show" class="card my-5" >
+    <div class="card-body" style="background-color: aliceblue;">
+      
+            <mat-card  *ngFor="let auction of auctions" style="margin:2em;cursor: pointer;" (click)="goToAuctionDashboard(auction.auctionDetailId)">
+              <mat-card-header>
+                <div style="background-image: url('./assets/TEA_BOARD_OF_INDIA_LOGO.png');" mat-card-avatar class="example-header-image"></div>
+              <mat-card-subtitle>
+               {{ auction.auctionBrief }}
+            </mat-card-subtitle>
+            <mat-card-subtitle>
+                
+              Auction Id : {{ auction.auctionDetailId }}
+            </mat-card-subtitle>
+            <mat-card-subtitle>
+                
+              End Date : {{ auction.startDate }}
+            </mat-card-subtitle>
+            <mat-card-subtitle>
+                
+              End Date : {{ auction.endDate }}
+            </mat-card-subtitle>
+            
+          </mat-card-header>
+          
+            </mat-card>
+            </div>
+            </div>
