@@ -11,9 +11,9 @@
        (keyup)="searchAuction($event)" ></mat-form-field> -->
 
        <mat-button-toggle-group style="width: 20%;margin-left: 40%;margin-right: 40%;" name="fontStyle" aria-label="Font Style">
-        <mat-button-toggle value="bold" (click)="getLiveAuctions()">Live</mat-button-toggle>
-        <mat-button-toggle value="italic" (click)="getPendingAuctions()">Pending</mat-button-toggle>
-        <mat-button-toggle style="width: 35%;" value="underline" (click)="getAllAuctions()">All</mat-button-toggle>
+        <mat-button-toggle value="bold" (click)="getLiveAuctions()">Live {{liveFlag == true ? '('+totalAuctions+')' : ''}}</mat-button-toggle>
+        <mat-button-toggle value="italic" (click)="getPendingAuctions()">Pending {{pendingFlag == true ? '('+totalAuctions+')' : ''}}</mat-button-toggle>
+        <mat-button-toggle style="width: 35%;" value="underline" (click)="getAllAuctions()">All {{allFlag == true ? '('+totalAuctions+')' : ''}}</mat-button-toggle>
       </mat-button-toggle-group>
        
       <h1 *ngIf="noAuctions" style="text-align: center;color: royalblue;font-size: large;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">No Auctions<br><small style="font-size: small;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;color: brown;">No Auctions</small></h1>

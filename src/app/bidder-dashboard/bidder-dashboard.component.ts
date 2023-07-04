@@ -12,6 +12,10 @@ export class BidderDashboardComponent {
   noAuctions:boolean
   auctions:AuctionDetail[];
   tabId:number
+  totalAuctions:number = 0
+  liveFlag:boolean = true
+  pendingFlag:boolean = false
+  allFlag:boolean = false
   constructor(private auctionService: AuctionServiceService,private router: Router) { }
 
   ngOnInit(): void {
@@ -21,8 +25,17 @@ export class BidderDashboardComponent {
       this.tabId=1
       if(data == undefined || data.length == 0){
         this.noAuctions=true
+        this.totalAuctions=this.auctions.length
+        this.liveFlag=true
+        this.allFlag=false
+        this.pendingFlag=false
+        this.noAuctions=true
       }
       else{
+        this.totalAuctions=this.auctions.length
+        this.liveFlag=true
+        this.allFlag=false
+        this.pendingFlag=false
         this.noAuctions=false
       }
     });
@@ -45,8 +58,17 @@ export class BidderDashboardComponent {
       this.tabId=1
       if(data == undefined || data.length == 0){
         this.noAuctions=true
+        this.totalAuctions=this.auctions.length
+        this.liveFlag=true
+        this.allFlag=false
+        this.pendingFlag=false
+        this.noAuctions=true
       }
       else{
+        this.totalAuctions=this.auctions.length
+        this.liveFlag=true
+        this.allFlag=false
+        this.pendingFlag=false
         this.noAuctions=false
       }
     });
@@ -64,8 +86,17 @@ export class BidderDashboardComponent {
       this.auctions = data;
       if(data == undefined || data.length == 0){
         this.noAuctions=true
+        this.totalAuctions=this.auctions.length
+        this.liveFlag=false
+        this.allFlag=false
+        this.pendingFlag=true
+        this.noAuctions=true
       }
       else{
+        this.totalAuctions=this.auctions.length
+        this.liveFlag=false
+        this.allFlag=false
+        this.pendingFlag=true
         this.noAuctions=false
       }
     });
@@ -81,8 +112,17 @@ export class BidderDashboardComponent {
       this.auctions = data;
       if(data == undefined || data.length == 0){
         this.noAuctions=true
+        this.totalAuctions=this.auctions.length
+        this.liveFlag=false
+        this.allFlag=true
+        this.pendingFlag=false
+        this.noAuctions=true
       }
       else{
+        this.totalAuctions=this.auctions.length
+        this.liveFlag=false
+        this.allFlag=true
+        this.pendingFlag=false
         this.noAuctions=false
       }
     });
