@@ -35,6 +35,7 @@ import { BiddingDashboardComponent } from './bidding-dashboard/bidding-dashboard
 import {MatExpansionModule} from '@angular/material/expansion';
 import { ApproveAuctionComponent } from './approve-auction/approve-auction.component';
 import { ReportDashboardComponent } from './report-dashboard/report-dashboard.component';
+import { BiddingDashboardNewComponent } from './bidding-dashboard-new/bidding-dashboard-new.component';
 
 
 @NgModule({
@@ -51,7 +52,8 @@ import { ReportDashboardComponent } from './report-dashboard/report-dashboard.co
     AuctionCreateComponent,
     BiddingDashboardComponent,
     ApproveAuctionComponent,
-    ReportDashboardComponent
+    ReportDashboardComponent,
+    BiddingDashboardNewComponent
   ],
   imports: [
     BrowserModule,

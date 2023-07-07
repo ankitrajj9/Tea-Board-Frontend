@@ -11,6 +11,7 @@ import { AuctionBidderDashboardComponent } from './auction-bidder-dashboard/auct
 import { BiddingDashboardComponent } from './bidding-dashboard/bidding-dashboard.component';
 import { ApproveAuctionComponent } from './approve-auction/approve-auction.component';
 import { ReportDashboardComponent } from './report-dashboard/report-dashboard.component';
+import { BiddingDashboardNewComponent } from './bidding-dashboard-new/bidding-dashboard-new.component';
 
 const routes: Routes = [
   {
@@ -27,6 +28,7 @@ const routes: Routes = [
   {path: 'auctionauctioneerdashboard/:auctionDetailId', component:AuctionAuctioneerDashboardComponent},
   {path: 'auctionbidderdashboard/:auctionDetailId', component:AuctionBidderDashboardComponent},
   {path: 'biddingdashboard/:auctionDetailId', component:BiddingDashboardComponent},
+  {path: 'biddingdashboardnew/:auctionDetailId', component:BiddingDashboardNewComponent},
   {path: 'approveauction/:auctionDetailId', component:ApproveAuctionComponent},
   {path: 'reportdashboard/:auctionDetailId', component:ReportDashboardComponent},
 ];

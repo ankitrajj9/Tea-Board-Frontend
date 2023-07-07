@@ -131,4 +131,8 @@ export class BidderDashboardComponent {
   biddingDashboard(auctionDetailId:any){
     this.router.navigate([`biddingdashboard/${auctionDetailId}`]);
   }
+
+  biddingDashboardNew(auctionDetailId:any){
+    this.router.navigate([`biddingdashboardnew/${auctionDetailId}`]);
+  }
 }

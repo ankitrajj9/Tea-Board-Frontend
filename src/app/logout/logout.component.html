@@ -4,7 +4,7 @@
       <mat-card style="margin:2em;">
         <mat-card-title style="margin-left: auto;margin-right: auto;">Log In</mat-card-title>
         <mat-card-content>
-            <div  class="alert alert-success">You have been logged out</div>
+            <div [hidden]="hideDiv" [class]="dynClass">{{dynMsg}}</div>
       <form (ngSubmit)="logIn()" #userForm="ngForm">
         <div class="form-group" >
           <mat-form-field class="mat-form-field">

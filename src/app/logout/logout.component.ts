@@ -10,8 +10,10 @@ import { AuctionServiceService } from '../auction-service.service';
 })
 export class LogoutComponent {
   userLogin : UserLogin
-  showDiv:boolean=true
+  hideDiv:boolean
   errorMessage:string=''
+  dynMsg = 'You have been logged out'
+  dynClass='alert alert-success'
 
   constructor(
     private route: ActivatedRoute, 
@@ -22,6 +24,7 @@ export class LogoutComponent {
   }
 
   ngOnInit():void{
+    this.hideDiv=false
     window.localStorage.removeItem('token');
     window.localStorage.removeItem('userLoginId');
     window.localStorage.removeItem('userTypeId');
@@ -29,7 +32,7 @@ export class LogoutComponent {
 
   logIn(){
     this.auctionService.login(this.userLogin).subscribe(result => {
-      this.showDiv=true
+      this.hideDiv=true
       if(result.responseCode == 200){
         window.localStorage.setItem('token', result.token);
         window.localStorage.setItem('userLoginId',result.userLoginId);
@@ -43,12 +46,14 @@ export class LogoutComponent {
         }
       }
       else{
-        this.showDiv=false
-        this.errorMessage='Email Id or Password is Incorrect'
+        this.hideDiv=false
+        this.dynClass='alert alert-danger'
+        this.dynMsg='Email Id or Password is Incorrect'
       }
     },error => {
-      this.showDiv=false
-        this.errorMessage='Email Id or Password is Incorrect'
+      this.hideDiv=false
+      this.dynClass='alert alert-danger'
+        this.dynMsg='Email Id or Password is Incorrect'
     });
   }
 

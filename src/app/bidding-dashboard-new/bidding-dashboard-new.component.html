@@ -1,0 +1,2397 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Tea Board Auction</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedcolumns/4.2.2/css/fixedColumns.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta2/css/bootstrap-select.min.css">
+  </head>
+  <body>
+    <div class="SideBar">
+      <!---<span class="Close SidebarToggle">x</span>-->
+      <div class="SideBar-logo">
+        <img src="images/logo.png" class="img-fluid Logo">
+        <h2 class="SideBar-title">Bharat Auction </h2>
+      </div>
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"> Pre-Auction </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <ul class="sub-manu">
+                <li>
+                  <a href="">Category Master</a>
+                </li>
+                <li>
+                  <a href="">Manufacturer Mapping</a>
+                </li>
+                <li>
+                  <a href="">Grade Master</a>
+                </li>
+                <li>
+                  <a href="">Mark Master</a>
+                </li>
+                <li>
+                  <a href="">Warehouse Master</a>
+                </li>
+                <li>
+                  <a href="">Auctioneer Master</a>
+                </li>
+                <li>
+                  <a href="">Buyer Master</a>
+                </li>
+                <li>
+                  <a href="">Consignee Master</a>
+                </li>
+                <li>
+				<a class="" href="" data-bs-toggle="modal" data-bs-target="#sale-program-master">
+              Sale Program Master
+				</a>
+                 
+                </li>
+                <li>
+                  <a href="">Auction Session Master</a>
+                </li>
+                <li>
+                  <a href="">Charge Master</a>
+                </li>
+                <li>
+                  <a href="">Tax Master</a>
+                </li>
+                <li>
+                  <a href="">Configurable Parameters</a>
+                </li>
+                <li>
+                  <a href="">SPU Master</a>
+                </li>
+                <li>
+                  <a href="">Auctioneer Base Price Modification Range</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"> Auction </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <ul class="sub-manu">
+              <li>
+                <a href="">xxxxxxxxx</a>
+              </li>
+              <li>
+                <a href="">xxxxxxxxx</a>
+              </li>
+              <li>
+                <a href="">xxxxxxxxx</a>
+              </li>
+              <li>
+                <a href="">xxxxxxxxx</a>
+              </li>
+              <li>
+                <a href="">xxxxxxxxx</a>
+              </li>
+              <li>
+                <a href="">xxxxxxxxx</a>
+              </li>
+              <li>
+                <a href="">xxxxxxxxx</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"> Post Auction </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+            <ul class="sub-manu">
+              <li>
+                <a href="">xxxxxxxxx</a>
+              </li>
+              <li>
+                <a href="">xxxxxxxxx</a>
+              </li>
+              <li>
+                <a href="">xxxxxxxxx</a>
+              </li>
+              <li>
+                <a href="">xxxxxxxxx</a>
+              </li>
+              <li>
+                <a href="">xxxxxxxxx</a>
+              </li>
+              <li>
+                <a href="">xxxxxxxxx</a>
+              </li>
+              <li>
+                <a href="">xxxxxxxxx</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"> Report </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+            <ul class="sub-manu">
+              <li>
+                <a href="">xxxxxxxxx</a>
+              </li>
+              <li>
+                <a href="">xxxxxxxxx</a>
+              </li>
+              <li>
+                <a href="">xxxxxxxxx</a>
+              </li>
+              <li>
+                <a href="">xxxxxxxxx</a>
+              </li>
+              <li>
+                <a href="">xxxxxxxxx</a>
+              </li>
+              <li>
+                <a href="">xxxxxxxxx</a>
+              </li>
+              <li>
+                <a href="">xxxxxxxxx</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFive">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive"> Miscellaneous </button>
+          </h2>
+          <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+            <ul class="sub-manu">
+              <li>
+                <a href="">xxxxxxxxx</a>
+              </li>
+              <li>
+                <a href="">xxxxxxxxx</a>
+              </li>
+              <li>
+                <a href="">xxxxxxxxx</a>
+              </li>
+              <li>
+                <a href="">xxxxxxxxx</a>
+              </li>
+              <li>
+                <a href="">xxxxxxxxx</a>
+              </li>
+              <li>
+                <a href="">xxxxxxxxx</a>
+              </li>
+              <li>
+                <a href="">xxxxxxxxx</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingSix">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix"> Utility </button>
+          </h2>
+          <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+            <ul class="sub-manu">
+              <li>
+                <a href="">xxxxxxxxx</a>
+              </li>
+              <li>
+                <a href="">xxxxxxxxx</a>
+              </li>
+              <li>
+                <a href="">xxxxxxxxx</a>
+              </li>
+              <li>
+                <a href="">xxxxxxxxx</a>
+              </li>
+              <li>
+                <a href="">xxxxxxxxx</a>
+              </li>
+              <li>
+                <a href="">xxxxxxxxx</a>
+              </li>
+              <li>
+                <a href="">xxxxxxxxx</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--
+<div class="Logout"><a class="" href="">Logout</a></div>-->
+      <span class="version">Tea Board V-0.01</span>
+    </div>
+    <header class="header">
+      <nav class="navbar navbar-expand-lg">
+        <span class="SidebarToggle">
+          <span class="Sidebar-open">
+            <i class="fa fa-bars"></i>
+          </span>
+          <span class="Sidebar-close" style="display:none;">
+            <i class="fa fa-times" aria-hidden="true"></i>
+          </span>
+        </span>
+        <div class="container-fluid" style="
+    display: flex;
+">
+          <div class="logo mx-3">
+            <a class="navbar-brand" href="index.html">
+              <img src="images/logo.png" class="img-fluid Logo">
+            </a>
+            <h2 style="
+    margin: 0;
+    font-size: 20px;
+">Bharat Auction</h2>
+          </div>
+          <div class="header-2">
+            <span>
+              <b>Season :</b> 2023 </span>
+            <span class="divider"></span>
+            <span>
+              <b>Sale No :</b> 25 </span>
+            <span class="divider"></span>
+            <span>
+              <b>Auction Date :</b> 03-07-2023 </span>
+            <span class="divider"></span>
+            <span>
+              <b>Current Session Time :</b> 15:44- 15:47 </span>
+            <span class="Timer">
+              <i class="fa fa-clock" aria-hidden="true"></i> 06:40:53 PM </span>
+            <div class="Logout">
+              <a class="" href="login.html">Logout</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="Auction-Catalog mx-4">
+      <div class="tab-view po-rel">
+        <!-- Nav pills -->
+        <div class="auction-main-tab">
+          <ul class="nav nav-pills" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active auction-catalog-tab" data-bs-toggle="pill" href="#auction-catalog">Auction Catalog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " data-bs-toggle="pill" href="#summery">Summery</a>
+            </li>
+          </ul>
+          <div class="rg-button">
+            <a class="table-setting inline" href="" data-bs-toggle="modal" data-bs-target="#table-setting">
+              <i class="fa fa-wrench" aria-hidden="true"></i>
+            </a>
+            <!--<a href="" class="theme-btn-green add-catalog inline">Add to My Catalog</a>-->
+            <br class="clearBoth" />
+            <!-- you may or may not need this -->
+          </div>
+        </div>
+      </div>
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div id="auction-catalog-" class=" tab-pane active">
+          <div class="AuctionScreen">
+            <div class="row g-0">
+              <div class="LiveAuction">
+                <div class="TableBox">
+                  <table id="example" class="stripe- row-border order-column" style="width:100%">
+                    <thead>
+                      <tr>
+                        <th>LotNo</th>
+                        <th>Origin</th>
+                        <th>Type</th>
+                        <th>Subtype</th>
+                        <th>Ctgry</th>
+                        <th>Mark</th>
+                        <th>Grade</th>
+                        <th>Pkgs</th>
+                        <th>BasePrice</th>
+                        <th>Bidder</th>
+                        <th>Status</th>
+                        <th>Ntwt</th>
+                        <th>Grwt</th>
+                        <th style="width:80px;">Total Ntwt</th>
+                        <th style="width:80px;">Per. of Mfg</th>
+                        <th>PkgCmnts</th>
+                        <th>LotType</th>
+                        <th>GPNo</th>
+                        <th>GPDate</th>
+                        <th>Inv. No</th>
+                        <th>LSP/SP</th>
+                        <th>PL</th>
+                        <th>PkgNo</th>
+                        <th>WarehouseName</th>
+                        <th>Increment</th>
+                        <th>Garden</th>
+                        <th>Special</th>
+                        <th>Quality</th>
+                        <th>Colour of</th>
+                        <th>Age of</th>
+                        <th>Brewers</th>
+                        <th>NumofBidders</th>
+                        <th>Active Since</th>
+                        <th>Price</th>
+                        <th>My</th>
+                        <th>Confirm</th>
+                        <th>IN / OUT</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="Active-l">
+                        <td> 1</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>
+                          <input type="number" class="enter-price">
+                        </td>
+                        <td>
+                          <button class="table-btn confirm active">Click</button>
+                        </td>
+                        <td>
+                          <button class="table-btn  in active">IN</button>
+                        </td>
+                      </tr>
+                      <tr class="Active-l">
+                        <td> 1</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>
+                          <input type="number" class="enter-price">
+                        </td>
+                        <td>
+                          <button class="table-btn confirm active">Click</button>
+                        </td>
+                        <td>
+                          <button class="table-btn  in ">IN</button>
+                        </td>
+                      </tr>
+                      <tr class="pending-l">
+                        <td> 2</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>
+                          <input type="number" class="enter-price">
+                        </td>
+                        <td>
+                          <button class="table-btn confirm ">Click</button>
+                        </td>
+                        <td>
+                          <button class="table-btn  in active">IN</button>
+                        </td>
+                      </tr>
+                      <tr class="pending-l">
+                        <td> 3</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>
+                          <input type="number" class="enter-price">
+                        </td>
+                        <td>
+                          <button class="table-btn confirm active">Click</button>
+                        </td>
+                        <td>
+                          <button class="table-btn  in active">IN</button>
+                        </td>
+                      </tr>
+                      <tr class="sold-l">
+                        <td> 4</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>
+                          <input type="number" class="enter-price">
+                        </td>
+                        <td>
+                          <button class="table-btn confirm ">Click</button>
+                        </td>
+                        <td>
+                          <button class="table-btn  in ">IN</button>
+                        </td>
+                      </tr>
+                      <tr class="sold-l">
+                        <td> 4</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>
+                          <input type="number" class="enter-price">
+                        </td>
+                        <td>
+                          <button class="table-btn confirm ">Click</button>
+                        </td>
+                        <td>
+                          <button class="table-btn  in ">IN</button>
+                        </td>
+                      </tr>
+                      <tr class="unsold-l">
+                        <td> 4</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>
+                          <input type="number" class="enter-price">
+                        </td>
+                        <td>
+                          <button class="table-btn confirm ">Click</button>
+                        </td>
+                        <td>
+                          <button class="table-btn  in ">IN</button>
+                        </td>
+                      </tr>
+                      <tr class="unsold-l">
+                        <td> 4</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>
+                          <input type="number" class="enter-price">
+                        </td>
+                        <td>
+                          <button class="table-btn confirm ">Click</button>
+                        </td>
+                        <td>
+                          <button class="table-btn  in ">IN</button>
+                        </td>
+                      </tr>
+                      <tr class="unsold-l">
+                        <td> 4</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>
+                          <input type="number" class="enter-price">
+                        </td>
+                        <td>
+                          <button class="table-btn confirm ">Click</button>
+                        </td>
+                        <td>
+                          <button class="table-btn  in ">IN</button>
+                        </td>
+                      </tr>
+                      <tr class="unsold-l">
+                        <td> 4</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>
+                          <input type="number" class="enter-price">
+                        </td>
+                        <td>
+                          <button class="table-btn confirm ">Click</button>
+                        </td>
+                        <td>
+                          <button class="table-btn  in ">IN</button>
+                        </td>
+                      </tr>
+                      <tr class="unsold-l">
+                        <td> 4</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>
+                          <input type="number" class="enter-price">
+                        </td>
+                        <td>
+                          <button class="table-btn confirm ">Click</button>
+                        </td>
+                        <td>
+                          <button class="table-btn  in ">IN</button>
+                        </td>
+                      </tr>
+                      <tr class="unsold-l">
+                        <td> 4</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>
+                          <input type="number" class="enter-price">
+                        </td>
+                        <td>
+                          <button class="table-btn confirm ">Click</button>
+                        </td>
+                        <td>
+                          <button class="table-btn  in ">IN</button>
+                        </td>
+                      </tr>
+                      <tr class="unsold-l">
+                        <td> 4</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>
+                          <input type="number" class="enter-price">
+                        </td>
+                        <td>
+                          <button class="table-btn confirm ">Click</button>
+                        </td>
+                        <td>
+                          <button class="table-btn  in ">IN</button>
+                        </td>
+                      </tr>
+                      <tr class="unsold-l">
+                        <td> 4</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>
+                          <input type="number" class="enter-price">
+                        </td>
+                        <td>
+                          <button class="table-btn confirm ">Click</button>
+                        </td>
+                        <td>
+                          <button class="table-btn  in ">IN</button>
+                        </td>
+                      </tr>
+                      <tr class="unsold-l">
+                        <td> 4</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>
+                          <input type="number" class="enter-price">
+                        </td>
+                        <td>
+                          <button class="table-btn confirm ">Click</button>
+                        </td>
+                        <td>
+                          <button class="table-btn  in ">IN</button>
+                        </td>
+                      </tr>
+                      <tr class="unsold-l">
+                        <td> 4</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>
+                          <input type="number" class="enter-price">
+                        </td>
+                        <td>
+                          <button class="table-btn confirm ">Click</button>
+                        </td>
+                        <td>
+                          <button class="table-btn  in ">IN</button>
+                        </td>
+                      </tr>
+                      <tr class="unsold-l">
+                        <td> 4</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>
+                          <input type="number" class="enter-price">
+                        </td>
+                        <td>
+                          <button class="table-btn confirm ">Click</button>
+                        </td>
+                        <td>
+                          <button class="table-btn  in ">IN</button>
+                        </td>
+                      </tr>
+                      <tr class="unsold-l">
+                        <td> 4</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>
+                          <input type="number" class="enter-price">
+                        </td>
+                        <td>
+                          <button class="table-btn confirm ">Click</button>
+                        </td>
+                        <td>
+                          <button class="table-btn  in ">IN</button>
+                        </td>
+                      </tr>
+                      <tr class="unsold-l">
+                        <td> 4</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>
+                          <input type="number" class="enter-price">
+                        </td>
+                        <td>
+                          <button class="table-btn confirm ">Click</button>
+                        </td>
+                        <td>
+                          <button class="table-btn  in ">IN</button>
+                        </td>
+                      </tr>
+                      <tr class="unsold-l">
+                        <td> 4</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>
+                          <input type="number" class="enter-price">
+                        </td>
+                        <td>
+                          <button class="table-btn confirm ">Click</button>
+                        </td>
+                        <td>
+                          <button class="table-btn  in ">IN</button>
+                        </td>
+                      </tr>
+                      <tr class="unsold-l">
+                        <td> 4</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>
+                          <input type="number" class="enter-price">
+                        </td>
+                        <td>
+                          <button class="table-btn confirm ">Click</button>
+                        </td>
+                        <td>
+                          <button class="table-btn  in ">IN</button>
+                        </td>
+                      </tr>
+                      <tr class="unsold-l">
+                        <td> 4</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>
+                          <input type="number" class="enter-price">
+                        </td>
+                        <td>
+                          <button class="table-btn confirm ">Click</button>
+                        </td>
+                        <td>
+                          <button class="table-btn  in ">IN</button>
+                        </td>
+                      </tr>
+                      <tr class="unsold-l">
+                        <td> 4</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>
+                          <input type="number" class="enter-price">
+                        </td>
+                        <td>
+                          <button class="table-btn confirm ">Click</button>
+                        </td>
+                        <td>
+                          <button class="table-btn  in ">IN</button>
+                        </td>
+                      </tr>
+                      <tr class="unsold-l">
+                        <td> 4</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>
+                          <input type="number" class="enter-price">
+                        </td>
+                        <td>
+                          <button class="table-btn confirm ">Click</button>
+                        </td>
+                        <td>
+                          <button class="table-btn  in ">IN</button>
+                        </td>
+                      </tr>
+                      <tr class="unsold-l">
+                        <td> 4</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>xxxxxxxxxxx</td>
+                        <td>
+                          <input type="number" class="enter-price">
+                        </td>
+                        <td>
+                          <button class="table-btn confirm ">Click</button>
+                        </td>
+                        <td>
+                          <button class="table-btn  in ">IN</button>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="status-bx-view">
+        <div class="status-bx">
+          <span class="status-color-bx Active-Lots-bx "></span>
+          <span class="status-name"> Active Lots</span>
+        </div>
+        <div class="status-bx">
+          <span class="status-color-bx Pending Lots-bx "></span>
+          <span class="status-name"> Pending Lots</span>
+        </div>
+        <div class="status-bx">
+          <span class="status-color-bx Sold Lots-bx "></span>
+          <span class="status-name"> Sold Lots</span>
+        </div>
+        <div class="status-bx">
+          <span class="status-color-bx Unsold-Lots-bx "></span>
+          <span class="status-name"> Unsold Lots </span>
+        </div>
+        <div class="status-bx">
+          <span class="status-color-bx MaxBidOut-bx "></span>
+          <span class="status-name"> MaxBidOut </span>
+        </div>
+        <div class="status-bx">
+          <span class="status-color-bx WinnerBuyer-bx "></span>
+          <span class="status-name"> WinnerBuyer </span>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="tab-view">
+      <!-- Tab panes -->
+      <div class="tab-content tab-view-footer ">
+        <div id="summery" class=" tab-pane  bottom-fix-tab">
+          <span class="Close">x</span>
+          <div class="AuctionScreen">
+            <div class="summary">
+              <div class="row">
+                <div class="col-md-5">
+                  <div class="summery-bx">
+                    <div class="summery-sm-bx-title">Summary of Tea Sold </div>
+                    <div class="summery-sm-bx-info">
+                      <div class="TableBox">
+                        <table id="Tea-Sold" class="stripe row-border order-column" style="min-width:100%">
+                          <thead>
+                            <tr>
+                              <th>Lat No</th>
+                              <th>Mark</th>
+                              <th>Grade</th>
+                              <th>Pkgs</th>
+                              <th>Closing</th>
+                              <th>Bidder</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td> ABDl4582</td>
+                              <td>xxxxx xxxx xxxx</td>
+                              <td>BP</td>
+                              <td>15</td>
+                              <td>280.00</td>
+                              <td>MSP CORPORATE</td>
+                            </tr>
+                            <tr>
+                              <td> ABDl4582</td>
+                              <td>xxxxx xxxx xxxx</td>
+                              <td>BP</td>
+                              <td>15</td>
+                              <td>280.00</td>
+                              <td>MSP CORPORATE</td>
+                            </tr>
+                            <tr>
+                              <td> ABDl4582</td>
+                              <td>xxxxx xxxx xxxx</td>
+                              <td>BP</td>
+                              <td>15</td>
+                              <td>280.00</td>
+                              <td>MSP CORPORATE</td>
+                            </tr>
+                            <tr>
+                              <td> ABDl4582</td>
+                              <td>xxxxx xxxx xxxx</td>
+                              <td>BP</td>
+                              <td>15</td>
+                              <td>280.00</td>
+                              <td>MSP CORPORATE</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="summery-bx Auctioneer-list-bx">
+                    <div class="summery-sm-bx-title">Auctioneer Market Summary</div>
+                    <div class="summery-sm-bx-info">
+                      <div class="Auctioneer-list">
+                        <div class="Auctioneer-bx">GPT</div>
+                        <div class="Auctioneer-bx">RCP</div>
+                        <div class="Auctioneer-bx">PTM</div>
+                        <div class="Auctioneer-bx">ABL</div>
+                        <div class="Auctioneer-bx">CBL</div>
+                        <div class="Auctioneer-bx">JTC</div>
+                        <div class="Auctioneer-bx">PIP</div>
+                        <div class="Auctioneer-bx">ATB</div>
+                        <div class="Auctioneer-bx">GPT</div>
+                        <div class="Auctioneer-bx">RCP</div>
+                        <div class="Auctioneer-bx">PTM</div>
+                        <div class="Auctioneer-bx">ABL</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="summery-bx Market-Summary-bx">
+                    <div class="summery-sm-bx-title">Market Summary</div>
+                    <div class="summery-sm-bx-info">
+                      <div class="TableBox">
+                        <table id="Tea-Sold" class="stripe row-border order-column" style="width:100%">
+                          <thead>
+                            <tr>
+                              <th>Status</th>
+                              <th style="width:105px;">No. of Lots</th>
+                              <th>Pkgs</th>
+                              <th>Kgs</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td> Active</td>
+                              <td>454</td>
+                              <td>5656</td>
+                              <td>1465465</td>
+                            </tr>
+                            <tr>
+                              <td> Active</td>
+                              <td>454</td>
+                              <td>5656</td>
+                              <td>1465465</td>
+                            </tr>
+                            <tr>
+                              <td> Pending</td>
+                              <td>454</td>
+                              <td>5656</td>
+                              <td>1465465</td>
+                            </tr>
+                            <tr>
+                              <td> UnSold</td>
+                              <td>454</td>
+                              <td>5656</td>
+                              <td>1465465</td>
+                            </tr>
+                            <tr>
+                              <td> Total</td>
+                              <td>454</td>
+                              <td>5656</td>
+                              <td>1465465</td>
+                            </tr>
+                            <tr>
+                              <td> Avg.Price</td>
+                              <td>454</td>
+                              <td>5656</td>
+                              <td>1465465</td>
+                            </tr>
+                            <tr>
+                              <td> Successful Bidders</td>
+                              <td>454</td>
+                              <td>5656</td>
+                              <td>1465465</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="LiveAuction"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta2/js/bootstrap-select.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/fixedcolumns/4.2.2/js/dataTables.fixedColumns.min.js"></script>
+    <script>
+      $('#example').DataTable({
+        fixedColumns: {
+          left: 4,
+          right: 4
+        },
+        //paging: false,
+        scrollCollapse: true,
+        scrollX: true,
+        "paging": false,
+        "ordering": false,
+        "searching": false,
+        "info": false,
+        // scrollY: 700
+      });
+      var table = $('#example').DataTable();
+      $('#container').css('display', 'block');
+      table.columns.adjust().draw();
+    </script>
+    <script>
+      $('#Tea-Sold').DataTable({
+        //paging: false,
+        //scrollCollapse: true,
+        // scrollX: true,
+        "paging": false,
+        "ordering": false,
+        "searching": false,
+        "info": false,
+      });
+    </script>
+	
+	<script>
+      $('#sale-program-list').DataTable({
+        //paging: false,
+        //scrollCollapse: true,
+        // scrollX: true,
+        "paging": false,
+        "ordering": false,
+        "searching": false,
+        "info": false,
+      });
+    </script>
+	
+	<script>
+      $('#sale-program-list-edit').DataTable({
+        //paging: false,
+        //scrollCollapse: true,
+        // scrollX: true,
+        "paging": false,
+        "ordering": false,
+        "searching": false,
+        "info": false,
+      });
+    </script>
+	
+	
+	
+    <script>
+      $('#My-Catalog').DataTable({
+        //paging: false,
+        //scrollCollapse: true,
+        // scrollX: true,
+        "paging": false,
+        "ordering": false,
+        "searching": false,
+        "info": false,
+      });
+    </script>
+    <script type="text/javascript">
+      $('.SidebarToggle').click(function() {
+        $('.SideBar').toggleClass('active');
+        $('.Auction-Catalog').toggleClass('active');
+        $('.header').toggleClass('active');
+        $('.tab-view-footer ').toggleClass('active');
+      })
+    </script>
+    <script>
+      $(".Close").click(function() {
+        $("#my-planner").removeClass("active show");
+        $("#my-catalog").removeClass("active show");
+        $("#summery").removeClass("active show");
+      });
+    </script>
+    <script>
+      $("a.nav-link").click(function() {
+        $(".tab-content").addClass("active-T");
+      });
+      $(".auction-catalog-tab").click(function() {
+        $(".tab-content").removeClass("active-T");
+      });
+      $("span.Close").click(function() {
+        $(".tab-content").removeClass("active-T");
+      });
+    </script>
+    <!-- table-setting -->
+    <div class="modal fade " id="table-setting" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" 
+	aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-md">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel"> Table Setting</h5>
+            <i class="fa fa-close btn-close modal-close" data-bs-dismiss="modal" aria-label="Close"></i>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="row">
+                <div class="mb-3 col-md-6">
+                  <label for="exampleInputEmail1" class="form-label">Left Column Fix</label>
+                  <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3  col-md-6">
+                  <label for="exampleInputPassword1" class="form-label">Right Column Fix</label>
+                  <input type="number" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3  col-md-12">
+                  <label for="exampleInputPassword1" class="form-label">Add/Remove Column</label>
+                  <div>
+                    <select id="divRatings" class="selectpicker" multiple data-size="5" data-selected-text-format="count>2" data-all="false">
+                      <option value="All" selected="selected">Select All </option>
+                      <option value="EC">Subtype </option>
+                      <option value="EC">Ctgry </option>
+                      <option value="EC">Mark </option>
+                      <option value="EC">Grade </option>
+                      <option value="EC">Pkgs </option>
+                      <option value="EC">BasePrice </option>
+                      <option value="EC">Bidder </option>
+                      <option value="EC">Status </option>
+                      <option value="EC">Ntwt </option>
+                      <option value="EC">Grwt </option>
+                      <option value="EC">Total Ntwt </option>
+                      <option value="EC">Per. of Mfg </option>
+                      <option value="EC">PkgCmnts </option>
+                      <option value="EC">LotType </option>
+                      <option value="EC">GPNo </option>
+                      <option value="EC">GPDate </option>
+                      <option value="EC">Inv. No </option>
+                      <option value="EC">LSP/SP </option>
+                      <option value="EC">PL </option>
+                      <option value="EC">PkgNo </option>
+                      <option value="EC">WarehouseName </option>
+                      <option value="EC">Increment </option>
+                      <option value="EC">Garden </option>
+                      <option value="EC">Special </option>
+                      <option value="EC">Quality </option>
+                      <option value="EC">Colour of </option>
+                      <option value="EC">Age of </option>
+                      <option value="EC">Brewers </option>
+                      <option value="EC">NumofBidders </option>
+                      <option value="EC">Active Since </option>
+                      <option value="EC">Price </option>
+                      <option value="EC">My </option>
+                      <option value="EC">Confirm </option>
+                      <option value="EC">IN / OUT </option>
+                      <option value="EC">
+                        </option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary sub-act">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+	
+	
+	
+	  <!-- sale-program-master -->
+  <div class="modal fade " id="sale-program-master" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" 
+	aria-labelledby="staticBackdropLabel" aria-hidden="true">
+	
+	  <!--<div class="modal fade show" id="sale-program-master" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+	aria-labelledby="staticBackdropLabel" aria-modal="true" role="dialog" style="display: block;">-->
+	
+      <div class="modal-dialog modal-lg" style=" max-width: 68%;">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel"> Sale Program Master</h5>
+            <i class="fa fa-close btn-close modal-close" data-bs-dismiss="modal" aria-label="Close"></i>
+          </div>
+          <div class="modal-body">
+		  <div class="py-15 px-15">
+		  
+		  
+		  <div class="">
+		  
+           <fieldset>
+                <legend><span class="back-btn text-capitalize">list</span> </legend>
+
+                <div class="row">
+                 <div class="">
+				   <div class="fileter-area">
+				  
+				  <form class="form-inline">
+  <div class="d-flex">
+  <div class="form-group mr-2">
+  
+
+     <select class="custom-select my-1 mr-sm-2 sm-select" id="inlineFormCustomSelectPref">
+    <option selected>Select season</option>
+ <option value="1">2013</option>
+ <option value="1">2014</option>
+ <option value="1">2015</option>
+ <option value="1">2016</option>
+ <option value="1">2017</option>
+ <option value="1">2018</option>
+ <option value="1">2019</option>
+ <option value="1">2020</option>
+ <option value="1">2021</option>
+ <option value="1">2022</option>
+ <option value="1">2023</option>
+ <option value="1">2024</option>
+ <option value="1">2025</option>
+ <option value="1">2026</option>
+ <option value="1">2027</option>
+
+  
+  </select>
+  </div>
+  <div class="form-group mb-2">
+  
+
+     <select class="custom-select my-1 mr-2 sm-select" id="inlineFormCustomSelectPref">
+    <option selected>Select  Sale No.</option>
+    <option value="1">All</option>
+    
+  </select>
+  </div>
+   <button type="submit" class="btn btn-primary mb-2 small-btn-search"> Search</button>
+  </div>
+ 
+</form>
+				   </div>
+				   
+				 </div>
+				   
+				   
+				   
+				   <div class="list">
+				   
+				   <table id="sale-program-list" class="stripe row-border order-column dataTable no-footer" style="min-width:100%">
+                          <thead>
+                            <tr>
+							
+<th class="">Tea Type</th>
+<th class="">Sale No</th>
+<th class="">Sale Date</th>
+<th class="">Buyer's Prompt Date</th>
+<th class="">Seller's Prompt Date</th>
+<th class="">Statuse</th>
+<th class="">Edit</th>
+<th class="">Delete</th>
+							</tr>
+                          </thead>
+                          <tbody>
+                            
+                            
+                            
+                            
+                          <tr class="">
+                              <td> Both</td>
+                              <td> 1 </td>
+                              <td>04/01/2023</td>
+                              <td>04/01/2023</td>
+                              <td>04/01/2023</td>
+                              <td>Completed</td>
+							  <td><i class="fa fa-edit"></i></td>
+							  <td><i class="fa fa-trash" aria-hidden="true"></i></td>
+
+                            </tr>
+							
+							 <tr class="">
+                              <td> Both</td>
+                              <td> 1 </td>
+                              <td>04/01/2023</td>
+                              <td>04/01/2023</td>
+                              <td>04/01/2023</td>
+                              <td>Completed</td>
+							  <td><i class="fa fa-edit"></i></td>
+							   <td><i class="fa fa-trash" aria-hidden="true"></i></td>
+                            </tr>
+							
+							
+							 <tr class="">
+                              <td> Both</td>
+                              <td> 1 </td>
+                              <td>04/01/2023</td>
+                              <td>04/01/2023</td>
+                              <td>04/01/2023</td>
+                              <td>Completed</td>
+							  <td><i class="fa fa-edit"></i></td>
+							   <td><i class="fa fa-trash" aria-hidden="true"></i></td>
+                            </tr>
+							
+							
+							 <tr class="">
+                              <td> Both</td>
+                              <td> 1 </td>
+                              <td>04/01/2023</td>
+                              <td>04/01/2023</td>
+                              <td>04/01/2023</td>
+                              <td>Completed</td>
+							  <td><i class="fa fa-edit"></i></td>
+							   <td><i class="fa fa-trash" aria-hidden="true"></i></td>
+                            </tr>
+							
+							
+							 <tr class="">
+                              <td> Both</td>
+                              <td> 1 </td>
+                              <td>04/01/2023</td>
+                              <td>04/01/2023</td>
+                              <td>04/01/2023</td>
+                              <td>Completed</td>
+							  <td><i class="fa fa-edit"></i></td>
+							   <td><i class="fa fa-trash" aria-hidden="true"></i></td>
+                            </tr>
+							
+							
+							 <tr class="">
+                              <td> Both</td>
+                              <td> 1 </td>
+                              <td>04/01/2023</td>
+                              <td>04/01/2023</td>
+                              <td>04/01/2023</td>
+                              <td>Completed</td>
+							  <td><i class="fa fa-edit"></i></td>
+							   <td><i class="fa fa-trash" aria-hidden="true"></i></td>
+                            </tr>
+							
+							
+							</tbody>
+                        </table>
+				   </div>
+				   
+                   
+                </div>
+            </fieldset>
+		  
+		  </div>
+		  
+		  <div class="mt-5">
+		  
+           <fieldset>
+                <legend><span class="back-btn text-capitalize">Maintenance</span> </legend>
+
+                <div class="row">
+                 <div class="col-md-5">
+				   <div class="fileter-area">
+				  
+				  <form class="form-inline ">
+				  
+				  
+		<div class="creat-maintenance  ">
+		
+		
+  <div class="form-group  mb-15 col-md-4-">
+    <label for="exampleInputEmail1 " class="w195"> Season</label>
+     <select class="sm-select custom-select my-1 mr-sm-2 mw-125" id="inlineFormCustomSelectPref">
+							
+								 <option value="1">2013</option>
+ <option value="1">2014</option>
+ <option value="1">2015</option>
+ <option value="1">2016</option>
+ <option value="1">2017</option>
+ <option value="1">2018</option>
+ <option value="1">2019</option>
+ <option value="1">2020</option>
+ <option value="1">2021</option>
+ <option value="1">2022</option>
+ <option value="1">2023</option>
+ <option value="1">2024</option>
+ <option value="1">2025</option>
+ <option value="1">2026</option>
+ <option value="1">2027</option>
+							  </select>
+  
+  </div>
+  <div class="form-group mb-15 col-md-4-">
+    <label for="exampleInputPassword1 " class="w195">Sale No.</label>
+     <select class="sm-select custom-select my-1 mr-sm-2 mw-125" id="inlineFormCustomSelectPref">
+							
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="3">4</option>
+								<option value="3">5</option>
+								<option value="3">6</option>
+								<option value="3">7</option>
+							  </select>
+  </div>
+  <div class="form-group  mb-15 col-md-4-">
+    <label for="exampleInputEmail1 " class="w195" >Catalog Closing Date</label>
+    <input type="date" id="" name="" class="mw-125">
+  
+  </div>
+  
+<div class="form-group  mb-15 col-md-4-">
+    <label for="exampleInputPassword1 " class="w195">Catalog Publishing Date</label>
+    <input type="date" id="" name="" class="mw-125">
+  </div>
+	 <div class="form-group  mb-15 col-md-6-">
+    <label for="exampleInputPassword1 " class="w195">No. of Auction Days</label>
+   <select class="custom-select my-1 mr-sm-2 mw-125" id="inlineFormCustomSelectPref">
+							
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+							  </select>
+  </div>	
+		
+		
+		
+		
+		</div>		  
+  
+ 
+</form>
+				   </div>
+				   
+				 </div>
+				   
+				   
+				    <div class="col-md-7 ">
+				   <div class="list">
+				   
+				   <table id="sale-program-list-edit" class="" style="min-width:100%">
+                          <thead>
+                            <tr>
+						
+<th class="">Tea Type</th>
+<th class="">Sale Date</th>
+<th class="">Buyer's Prompt Date</th>
+<th class="">Seller's Prompt Date</th>
+<th class="">Status</th>
+
+				
+							</tr>
+                          </thead>
+                          <tbody>
+                            
+                            
+                            
+
+
+                            
+                          <tr class="">
+                              <td> 
+							  <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+							
+								<option value="1">Leaf</option>
+								<option value="2">Dust</option>
+								<option value="3">Both</option>
+							  </select>
+  
+								</td>
+                              
+                             <td> 
+							<input type="date" id="" name="">
+  
+								</td>
+								
+								
+								<td> 
+								<input type="date" id="" name="">
+  
+								</td>
+								
+								
+								<td> 
+							  	<input type="date" id="" name="">
+  
+								</td>
+                              <td> Pending</td>
+							 
+                            </tr>
+							
+							                          <tr class="">
+                              <td> 
+							  <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+							
+								<option value="1">Leaf</option>
+								<option value="2">Dust</option>
+								<option value="3">Both</option>
+							  </select>
+  
+								</td>
+                              
+                             <td> 
+							<input type="date" id="" name="">
+  
+								</td>
+								
+								
+								<td> 
+								<input type="date" id="" name="">
+  
+								</td>
+								
+								
+								<td> 
+							  	<input type="date" id="" name="">
+  
+								</td>
+                              <td> Pending</td>
+							 
+                            </tr>
+							
+							 <tr class="">
+                              <td> 
+							  <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+							
+								<option value="1">Leaf</option>
+								<option value="2">Dust</option>
+								<option value="3">Both</option>
+							  </select>
+  
+								</td>
+                              
+                             <td> 
+							<input type="date" id="" name="">
+  
+								</td>
+								
+								
+								<td> 
+								<input type="date" id="" name="">
+  
+								</td>
+								
+								
+								<td> 
+							  	<input type="date" id="" name="">
+  
+								</td>
+                              <td> Pending</td>
+							
+                            </tr>
+							
+							
+							 <tr class="">
+                              <td> 
+							  <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+							
+								<option value="1">Leaf</option>
+								<option value="2">Dust</option>
+								<option value="3">Both</option>
+							  </select>
+  
+								</td>
+                              
+                             <td> 
+							<input type="date" id="" name="">
+  
+								</td>
+								
+								
+								<td> 
+								<input type="date" id="" name="">
+  
+								</td>
+								
+								
+								<td> 
+							  	<input type="date" id="" name="">
+  
+								</td>
+                              <td> Pending</td>
+							 
+                            </tr>
+							
+							
+							 <tr class="">
+                              <td> 
+							  <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+							
+								<option value="1">Leaf</option>
+								<option value="2">Dust</option>
+								<option value="3">Both</option>
+							  </select>
+  
+								</td>
+                              
+                             <td> 
+							<input type="date" id="" name="">
+  
+								</td>
+								
+								
+								<td> 
+								<input type="date" id="" name="">
+  
+								</td>
+								
+								
+								<td> 
+							  	<input type="date" id="" name="">
+  
+								</td>
+                              <td> Pending</td>
+							  
+                            </tr>
+							
+							
+							 <tr class="">
+                              <td> 
+							  <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+							
+								<option value="1">Leaf</option>
+								<option value="2">Dust</option>
+								<option value="3">Both</option>
+							  </select>
+  
+								</td>
+                              
+                             <td> 
+							<input type="date" id="" name="">
+  
+								</td>
+								
+								
+								<td> 
+								<input type="date" id="" name="">
+  
+								</td>
+								
+								
+								<td> 
+							  	<input type="date" id="" name="">
+  
+								</td>
+                              <td> Pending</td>
+							 
+                            </tr>
+							
+							</tbody>
+                        </table>
+				   </div>
+				   
+                   </div>
+				   
+				   
+				 
+                </div>
+				<hr>
+				<div class="upload doc">
+				
+<div class="wrap">
+  <h5>File upload multiple</h5>
+  <form action="#" name="form" method="get">
+    <div class="file">
+      <div class="file__input" id="file__input">
+        <input class="file__input--file" id="customFile" type="file" multiple="multiple" name="files[]"/>
+        <label class="file__input--label" for="customFile" data-text-btn="Upload">Add file:</label>
+      </div>
+    </div>
+  </form>
+</div> 
+				</div>
+				
+				<br><br>
+				  <button type="submit" class="btn btn-primary mb-2 big-act"> SAVE</button>
+            </fieldset>
+		  
+		  </div>
+		  
+		  </div>
+		  </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      $('#divRatings').on('change', function() {
+        var thisObj = $(this);
+        var isAllSelected = thisObj.find('option[value="All"]').prop('selected');
+        var lastAllSelected = $(this).data('all');
+        var selectedOptions = (thisObj.val()) ? thisObj.val() : [];
+        var allOptionsLength = thisObj.find('option[value!="All"]').length;
+        console.log(selectedOptions);
+        var selectedOptionsLength = selectedOptions.length;
+        if (isAllSelected == lastAllSelected) {
+          if ($.inArray("All", selectedOptions) >= 0) {
+            selectedOptionsLength -= 1;
+          }
+          if (allOptionsLength <= selectedOptionsLength) {
+            thisObj.find('option[value="All"]').prop('selected', true).parent().selectpicker('refresh');
+            isAllSelected = true;
+          } else {
+            thisObj.find('option[value="All"]').prop('selected', false).parent().selectpicker('refresh');
+            isAllSelected = false;
+          }
+        } else {
+          thisObj.find('option').prop('selected', isAllSelected).parent().selectpicker('refresh');
+        }
+        $(this).data('all', isAllSelected);
+      }).trigger('change');
+    </script>
+
+
+<script>
+$(document).ready(function() {
+	 
+	// ------------  File upload BEGIN ------------
+	$('.file__input--file').on('change',function(event){
+		var files = event.target.files;
+		for (var i = 0; i < files.length; i++) {
+			var file = files[i];
+			$("<div class='file__value'><div class='file__value--text'>" + file.name + "</div><div class='file__value--remove' data-id='" + file.name + "' ></div></div>").insertAfter('#file__input');
+		}	
+	});
+	
+	//Click to remove item
+	$('body').on('click', '.file__value', function() {
+		$(this).remove();
+	});
+	// ------------ File upload END ------------ 
+	
+	
+	
+});	
+</script>
+  </body>
+</html>
+
+
