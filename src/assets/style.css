@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
 body{margin:0;padding:0;box-sizing:border-box;font-family: 'Poppins', sans-serif;}
 ul{padding:0;margin:0;}
 
@@ -46,7 +46,7 @@ header .nav-link {font-size: 14px; font-weight: 500; color: #222222;}
 header {
     background: #04a44f;
 }
-header-2 {
+.header-2 {
     /* background: #dae5df; */
     /* padding: 4px 0; */
 }
@@ -849,128 +849,3 @@ table#sale-program-list , table#sale-program-list-edit {
   border: 1px solid #000;
 }
 /************************************************/
-
-
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
-.example-card {
-    max-width: 400px;
-  }
-  
-  .example-header-image {
-    
-    background-size: cover;
-  }
-.mat-form-field {
-
-  border-color: #a94442;
-  border-radius: 10px;
-}
-
-
-
-
-  .example-action-buttons {
-    padding-bottom: 20px;
-  }
-  
-  .example-headers-align .mat-expansion-panel-header-title,
-  .example-headers-align .mat-expansion-panel-header-description {
-    flex-basis: 0;
-  }
-  
-  .example-headers-align .mat-expansion-panel-header-description {
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .example-headers-align .mat-form-field + .mat-form-field {
-    margin-left: 8px;
-  }
-  
-  .my-panel {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-  }
-  .my-panel button {
-      margin: 15px 25px;
-    }
-  
-    .alert-success {
-      background-color: #dcf0d4;
-      border-color: #d6e9c6;
-      color: #3c763d;
-      }
-    
-      .alert-warning {
-      background-color: blanchedalmond;
-      border-color: #faebcc;
-      color: #8a6d3b;
-      }
-    
-      .alert-danger {
-      background-color: #f2dede;
-      border-color: #ebccd1;
-      color: #a94442;
-      }
-      .alert-dark {
-      background-color: rgb(236, 234, 234);
-      border-color: #bce8f1;
-      color: #31708f;
-      }
-
-      .left0 {
-        position: sticky;
-        left: 0;
-        z-index: 11;
-        background: #ddd;
-    }
-    
-      .left100 {
-        position: sticky;
-        left: 99px;
-        z-index: 11;
-        background: #ddd;
-    }
-    
-
-
-    .left200 {
-        position: sticky;
-        left: 198px;
-        z-index: 11;
-        background: #ddd;
-    }
-    
-    .right0 {
-        position: sticky;
-        right: 0;
-        z-index: 11;
-        background: #ddd;
-    }
-.right100 {
-        position: sticky;
-        right: 97px;
-        z-index: 11;
-        background: #ddd;
-    }
-    .right200 {
-        position: sticky;
-        right: 196px;
-        z-index: 11;
-        background: #ddd;
-    }
-    .right300 {
-        position: sticky;
-        right: 295px;
-        z-index: 11;
-        background: #ddd;
-        text-align: center;
-    }
-    .right400 {
-        position: sticky;
-        right: 394px;
-        z-index: 11;
-        background: #ddd;
-        text-align: center;
-    }

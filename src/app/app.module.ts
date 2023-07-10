@@ -36,6 +36,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import { ApproveAuctionComponent } from './approve-auction/approve-auction.component';
 import { ReportDashboardComponent } from './report-dashboard/report-dashboard.component';
 import { BiddingDashboardNewComponent } from './bidding-dashboard-new/bidding-dashboard-new.component';
+import {ToastrModule} from 'ngx-toastr'
 
 
 @NgModule({
@@ -76,7 +77,8 @@ import { BiddingDashboardNewComponent } from './bidding-dashboard-new/bidding-da
     NgxMatDatetimePickerModule,
     NgxMatTimepickerModule,
     MatButtonToggleModule,
-    MatExpansionModule
+    MatExpansionModule,
+    ToastrModule.forRoot()
   ],
   providers: [AuctionServiceService,
     {
