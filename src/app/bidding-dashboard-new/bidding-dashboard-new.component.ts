@@ -8,6 +8,7 @@ import { AuctionItemDetail } from '../auction-item-detail';
 import { LiveBidDetail } from '../live-bid-detail';
 import * as $ from "jquery";
 import { ToastrService } from 'ngx-toastr';
+import { AuctionItemDetailDescription } from '../auction-item-detail-description';
 
 @Component({
   selector: 'app-bidding-dashboard-new',
@@ -26,6 +27,8 @@ export class BiddingDashboardNewComponent {
   dynClass='alert alert-success'
   dynMessages = new Map()
   homeUrl:string='/bidderdashboard'
+  //auctionItemDetailIds:string=''
+  //auctionItemDetailDescriptions:AuctionItemDetailDescription[]
 
   private socket_url='http://192.168.100.155:8080/socket'
   private stompClient:any;
@@ -90,8 +93,22 @@ export class BiddingDashboardNewComponent {
     this.auctionService.getLiveBidDetails(this.auctionDetailId,this.userLoginId).subscribe(data => {
       console.log(data)
       this.liveBidDetails = data;
+      // for (var bidDtl of this.liveBidDetails) {
+      //   let auctionItemDetailId = bidDtl.auctionItemDetail.auctionItemDetailId;
+      //   this.auctionItemDetailIds = this.auctionItemDetailIds+auctionItemDetailId+","
+      // }
+      // this.auctionItemDetailIds = this.auctionItemDetailIds.slice(0, -1)
+      // console.log(this.auctionItemDetailIds)
+      // this.auctionService.getItemDescriptions(this.auctionItemDetailIds).subscribe(
+      //   data => {
+      //     console.log(data)
+      //     this.auctionItemDetailDescriptions= data
+      //   }
+      // )
     });
     console.log(this.auctionDetailId)
+    
+
     // $('#item_'+799).show()
     //     $('#item_'+799).text('Max Bid Changed Successfully')
     //     $('#item_'+799).addClass('alert-success')

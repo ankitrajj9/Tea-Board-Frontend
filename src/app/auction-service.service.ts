@@ -8,6 +8,7 @@ import { AuctionItemDetail } from './auction-item-detail';
 import { PreBidDetail } from './pre-bid-detail';
 import { LiveBidDetail } from './live-bid-detail';
 import { ReportDetail } from './report-detail';
+import { AuctionItemDetailDescription } from './auction-item-detail-description';
 Observable;
 
 @Injectable({
@@ -106,5 +107,11 @@ export class AuctionServiceService {
 
  public searchAuctions(param,userLoginId): Observable<AuctionDetail[]>{
   return this.http.get<AuctionDetail[]>(this.teaboardBackEndUrl+`/searchauctions/${param}/${userLoginId}`);
+}
+
+public getItemDescriptions(auctionItemDetailIds:any): Observable<AuctionItemDetailDescription[]> {
+  const body = new HttpParams()
+      .set('auctionItemDetailIds', auctionItemDetailIds)
+  return this.http.post<AuctionItemDetailDescription[]>(this.teaboardBackEndUrl+`/getitemdescriptions`,body);
 }
 }

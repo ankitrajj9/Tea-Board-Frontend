@@ -351,38 +351,38 @@
                     <tbody>
                       <tr [class]="liveBidDetail.itemColor" *ngFor="let liveBidDetail of liveBidDetails">
                         <td class="left0"> {{liveBidDetail.auctionItemDetail.lotNo}}</td>
-                        <td class="left100">xxxxxxxxxxx</td>
-                        <td class="left200">xxxxxxxxxxx</td>
-                        <td>xxxxxxxxxxx</td>
+                        <td class="left100">{{liveBidDetail.auctionItemDetailDescription.origin}}</td>
+                        <td class="left200">{{liveBidDetail.auctionItemDetailDescription.type}}</td>
+                        <td>{{liveBidDetail.auctionItemDetailDescription.subType}}</td>
                         <td>{{liveBidDetail.auctionItemDetail.category}}</td>
-                        <td>xxxxxxxxxxx</td>
+                        <td>{{liveBidDetail.auctionItemDetailDescription.mark}}</td>
                         <td>{{liveBidDetail.auctionItemDetail.grade}}</td>
                         <td>{{liveBidDetail.auctionItemDetail.itemPackage}}</td>
                         <td>{{liveBidDetail.auctionItemDetail.basePrice}}</td>
-                        <td>xxxxxxxxxxx</td>
-                        <td>xxxxxxxxxxx</td>
-                        <td>xxxxxxxxxxx</td>
-                        <td>xxxxxxxxxxx</td>
-                        <td>xxxxxxxxxxx</td>
-                        <td>xxxxxxxxxxx</td>
-                        <td>xxxxxxxxxxx</td>
-                        <td>xxxxxxxxxxx</td>
-                        <td>xxxxxxxxxxx</td>
-                        <td>xxxxxxxxxxx</td>
-                        <td>xxxxxxxxxxx</td>
-                        <td>xxxxxxxxxxx</td>
-                        <td>xxxxxxxxxxx</td>
-                        <td>xxxxxxxxxxx</td>
-                        <td>xxxxxxxxxxx</td>
-                        <td>xxxxxxxxxxx</td>
-                        <td>xxxxxxxxxxx</td>
-                        <td>xxxxxxxxxxx</td>
-                        <td>xxxxxxxxxxx</td>
-                        <td>xxxxxxxxxxx</td>
-                        <td>xxxxxxxxxxx</td>
-                        <td>xxxxxxxxxxx</td>
-                        <td>xxxxxxxxxxx</td>
-                        <td>xxxxxxxxxxx</td>
+                        <td class="text-break">{{liveBidDetail.auctionItemDetailDescription.bidder}}</td>
+                        <td>{{liveBidDetail.auctionItemDetailDescription.status}}</td>
+                        <td>{{liveBidDetail.auctionItemDetailDescription.netWeight}}</td>
+                        <td>{{liveBidDetail.auctionItemDetailDescription.grossWeight}}</td>
+                        <td>{{liveBidDetail.auctionItemDetailDescription.totalNetWeight}}</td>
+                        <td>{{liveBidDetail.auctionItemDetailDescription.manufacturePercentage}}</td>
+                        <td>{{liveBidDetail.auctionItemDetailDescription.packageComments}}</td>
+                        <td>{{liveBidDetail.auctionItemDetailDescription.lotType}}</td>
+                        <td>{{liveBidDetail.auctionItemDetailDescription.gpNo}}</td>
+                        <td>{{liveBidDetail.auctionItemDetailDescription.gpDate}}</td>
+                        <td>{{liveBidDetail.auctionItemDetailDescription.invoiceNo}}</td>
+                        <td>{{liveBidDetail.auctionItemDetailDescription.lspSp}}</td>
+                        <td>{{liveBidDetail.auctionItemDetailDescription.pl}}</td>
+                        <td>{{liveBidDetail.auctionItemDetailDescription.packageNo}}</td>
+                        <td>{{liveBidDetail.auctionItemDetailDescription.warehouseName}}</td>
+                        <td>{{liveBidDetail.auctionItemDetail.increment}}</td>
+                        <td>{{liveBidDetail.auctionItemDetailDescription.garden}}</td>
+                        <td>{{liveBidDetail.auctionItemDetailDescription.special}}</td>
+                        <td>{{liveBidDetail.auctionItemDetailDescription.quality}}</td>
+                        <td>{{liveBidDetail.auctionItemDetailDescription.color}}</td>
+                        <td>{{liveBidDetail.auctionItemDetailDescription.age}}</td>
+                        <td>{{liveBidDetail.auctionItemDetailDescription.brewer}}</td>
+                        <td>{{liveBidDetail.auctionItemDetailDescription.noOfBidders}}</td>
+                        <td>{{liveBidDetail.auctionItemDetailDescription.activeSince}}</td>
                         <td class="right400">{{liveBidDetail.maxBid}}</td>
                         <td class="right300">{{liveBidDetail.currentBid}}</td>
                         <td class="right200">
